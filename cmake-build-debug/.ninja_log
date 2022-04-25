@@ -1,0 +1,21 @@
+# ninja log v5
+0	39	1650408441145970605	CMakeFiles/Project.dir/Code/C/src/km.c.o	3dc066ef0f379202
+0	34	1650913802657228415	build.ninja	342d1902e2ed53cc
+164	223	1650907988073481258	Project	413fe7c2ecd2940a
+0	33	1650408185899585763	CMakeFiles/Project.dir/Code/runner.c.o	2e9e02e02a24b63e
+1	95	1650219624221360778	CMakeFiles/Project.dir/Code/Node.cpp.o	376646f7be1b817a
+0	36	1650830996841257474	CMakeFiles/Project.dir/Code/C/src/reader.c.o	a6f8ced78a876867
+1	164	1650907988014088154	CMakeFiles/Project.dir/Code/C/src/main.c.o	f1a1c3663cec7638
+1	147	1650915058109114184	CMakeFiles/Project.dir/Code/C/src/main.c.o	f1a1c3663cec7638
+147	194	1650915058157717143	Project	413fe7c2ecd2940a
+2	46	1650920151743550290	CMakeFiles/Project.dir/Code/C/src/main.c.o	f1a1c3663cec7638
+1	49	1650920151746601905	CMakeFiles/Project.dir/Code/C/src/km.c.o	3dc066ef0f379202
+49	82	1650920151780236545	Project	413fe7c2ecd2940a
+2	133	1650920202091688051	CMakeFiles/Project.dir/Code/C/src/main.c.o	f1a1c3663cec7638
+133	175	1650920202134227457	Project	413fe7c2ecd2940a
+1	131	1650920249401899641	CMakeFiles/Project.dir/Code/C/src/main.c.o	f1a1c3663cec7638
+132	173	1650920249444869622	Project	413fe7c2ecd2940a
+1	127	1650921088057761381	CMakeFiles/Project.dir/Code/C/src/main.c.o	f1a1c3663cec7638
+127	169	1650921088101471460	Project	413fe7c2ecd2940a
+1	124	1650924405115042698	CMakeFiles/Project.dir/Code/C/src/main.c.o	f1a1c3663cec7638
+124	166	1650924405158582835	Project	413fe7c2ecd2940a

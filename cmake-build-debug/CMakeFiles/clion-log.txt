@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/grimm/Documents/ISU/Spring/2022/IT388/Project -B /Users/grimm/Documents/ISU/Spring/2022/IT388/Project/cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/grimm/Documents/ISU/Spring/2022/IT388/Project/cmake-build-debug
