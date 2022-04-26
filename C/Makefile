@@ -1,6 +1,6 @@
 CC = gcc -g
-CFLAGS = -Iinclude
-CLINK = -lm
+CFLAGS = -Iinclude 
+CLINK = -lm -fopenmp
 OPT =
 
 main.exe: main.o km.o
