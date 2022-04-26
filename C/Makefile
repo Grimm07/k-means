@@ -1,6 +1,13 @@
-CC = gcc -g
+
+# For Macs that are messed up
+CC = gcc-11 -g
+
+# For Macs that arent messed up
+# CC = gcc -g
+
 CFLAGS = -Iinclude 
-CLINK = -lm -fopenmp
+CLINK = -lm -fopenmp -lsqlite3
+
 OPT =
 
 main.exe: main.o km.o
