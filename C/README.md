@@ -1,3 +1,10 @@
+# Expanse build steps
+```
+$ module load cpu/0.15.4 gcc/10.2.0
+$ make
+$ ./main.exe Test_9.txt 9 3 2
+```
+
 # K-Means > C
 
 ## Interface

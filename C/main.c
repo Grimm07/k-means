@@ -21,46 +21,46 @@ int main(int argc, char *argv[])
     start = clock();
     if (argc == 2 && strstr(argv[1], "iris"))
     {
-        filename = "iris.sqlite";
-        observations_size = 150;
-        vector_size = 5;
-        k = 3;
-        observations = (double **)malloc(sizeof(double *) * observations_size);
-        for (int i = 0; i < observations_size; i++)
-            observations[i] = (double *)malloc(sizeof(double) * vector_size);
-        struct stat st;
-        if (stat(filename, &st) < 0)
-        {
-            printf("No such file or directory\n");
-            for (int i = 0; i < observations_size; ++i)
-            {
-                free(observations[i]);
-            }
-            free(observations);
-            exit(-1);
-        }
-        read_db(filename, observations_size);
-        load_data(observations, observations_size);
-        printf("Observations:\n");
-        print_observations(observations, observations_size, vector_size);
-        printf("\n\n");
-        start = clock();
-        clusters = km(observations, k, observations_size, vector_size);
-        end = clock();
-        printf("Clusters:\n");
-        print_clusters(clusters, k, observations_size, vector_size);
-        printf("\n");
-        fflush(stdout);
-        printf("Freeing allocated memory.\n");
-        for (int i = 0; i < k; ++i)
-            free(clusters[i]);
-        free(clusters);
+        // filename = "iris.sqlite";
+        // observations_size = 150;
+        // vector_size = 5;
+        // k = 3;
+        // observations = (double **)malloc(sizeof(double *) * observations_size);
+        // for (int i = 0; i < observations_size; i++)
+        //     observations[i] = (double *)malloc(sizeof(double) * vector_size);
+        // struct stat st;
+        // if (stat(filename, &st) < 0)
+        // {
+        //     printf("No such file or directory\n");
+        //     for (int i = 0; i < observations_size; ++i)
+        //     {
+        //         free(observations[i]);
+        //     }
+        //     free(observations);
+        //     exit(-1);
+        // }
+        // read_db(filename, observations_size);
+        // load_data(observations, observations_size);
+        // printf("Observations:\n");
+        // print_observations(observations, observations_size, vector_size);
+        // printf("\n\n");
+        // start = clock();
+        // clusters = km(observations, k, observations_size, vector_size);
+        // end = clock();
+        // printf("Clusters:\n");
+        // print_clusters(clusters, k, observations_size, vector_size);
+        // printf("\n");
+        // fflush(stdout);
+        // printf("Freeing allocated memory.\n");
+        // for (int i = 0; i < k; ++i)
+        //     free(clusters[i]);
+        // free(clusters);
 
-        for (int i = 0; i < observations_size; ++i)
-            free(observations[i]);
-        free(observations);
-        cleanUp();
-        //        fclose(fp);
+        // for (int i = 0; i < observations_size; ++i)
+        //     free(observations[i]);
+        // free(observations);
+        // cleanUp();
+        // //        fclose(fp);
     }
     else if (argc > 4)
     {
