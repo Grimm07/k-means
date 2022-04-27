@@ -140,7 +140,7 @@ double *vsum(const double *vector1, const double *vector2, int vector_size)
 {
 	double *vector = (double *)malloc(sizeof(double) * vector_size);
 
-#pragma omp parallel for num_threads(vector_size)
+#pragma omp parallel for num_threads(k)
 	for (int i = 0; i < vector_size; ++i)
 		vector[i] = vector1[i] + vector2[i];
 
@@ -151,7 +151,7 @@ double *vsub(const double *vector1, const double *vector2, int vector_size)
 {
 	double *vector = (double *)malloc(sizeof(double) * vector_size);
 
-#pragma omp parallel for num_threads(vector_size)
+#pragma omp parallel for num_threads(k)
 	for (int i = 0; i < vector_size; ++i)
 		vector[i] = vector1[i] - vector2[i];
 
@@ -249,7 +249,7 @@ int *partition(double **observations, double **cs, int k, int observations_size,
 	float curr_distance;
 	int centroid;
 
-#pragma omp parallel for num_threads(observations_size)
+#pragma omp parallel for num_threads(k)
 	for (int i = 0; i < observations_size; ++i)
 	{
 		float min_distance = DBL_MAX;
