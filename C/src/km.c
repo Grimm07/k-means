@@ -176,7 +176,7 @@ double norm(const double *vector, int vector_size)
 /* Loved this shuffling random algorithm
  * Source: http://stackoverflow.com/a/5064432
  */
-int rand_num(int size)
+int rand_num(int size, int k)
 {
 	static int *numArr = NULL;
 	static int numNums = 0;
@@ -196,7 +196,7 @@ int rand_num(int size)
 		if ((numArr = (int *)malloc(sizeof(int) * size)) == NULL)
 			return ERR_NO_MEM;
 
-#pragma omp parallel for num_threads(vector_size)
+#pragma omp parallel for num_threads(k)
 		for (i = 0; i < size; ++i)
 			numArr[i] = i;
 
@@ -225,20 +225,20 @@ double **initialize(double **observations, int k, int observations_size, int vec
 	double **centroids = (double **)malloc(sizeof(double *) * k);
 
 	srand(time(NULL));
-	int r = rand_num(observations_size);
+	int r = rand_num(observations_size, k);
 
-#pragma omp parallel for num_threads(vector_size)
+#pragma omp parallel for num_threads(k)
 	for (int i = 0; i < k; ++i)
 	{
 		centroids[i] = (double *)malloc(sizeof(double) * vector_size);
 		for (int j = 0; j < vector_size; ++j)
 		{
 			centroids[i][j] = observations[r][j];
-			r = rand_num(-1);
+			r = rand_num(-1, k);
 		}
 	}
 
-	rand_num(-22);
+	rand_num(-22, k);
 
 	return centroids;
 }
