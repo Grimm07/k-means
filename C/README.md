@@ -1,4 +1,6 @@
-# K-Means > C
+# K-Means - C Implementation
+
+###### The following algorithm was forked from github: `dcasella/k-means`
 
 ## Interface
 
@@ -21,6 +23,21 @@ void print_observations(double **observations, int observations_size, int vector
 
 void print_clusters(double ***clusters, int k, int observations_size, int vector_size);
 ```
+
+- KM - consutructor for the K-Means Algorithm
+- Centroid - method defines the behaviors of the centroid used in the K-Means algorithm
+- Vsum - Vector Sum
+- VSub - Vector Subtraction
+- Innerprod - Inner product of vectors
+- Norm - matrix norm 
+
+## Parallelization
+- Pragma statements were added to the following methods
+  - vsum
+  - vsub
+  - rand_num
+  - initialize
+  - partition
 
 ## Example
 
@@ -50,3 +67,8 @@ Output:
  [(6.00, 4.00), (7.00, 5.50), (9.00, 4.00)],
  [(3.00, 7.00), (1.00, 8.00), (4.00, 9.00)]}
 ```
+
+## Run Steps
+- Change directory to the project, specifically the `C` directory
+- Run `make` command
+- To run the iris dataset, use the command: `./main IrisStripped.txt 150 4 3`
